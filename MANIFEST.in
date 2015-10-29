@@ -1,0 +1,4 @@
+include conf/export.conf
+include conf/prod.zuora.a.39.0.wsdl
+include conf/zuora-producer.conf
+recursive-include src/producers *

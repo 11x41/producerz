@@ -1,0 +1,12 @@
+[ZUORA_PRODUCER]
+server = https://www.zuora.com
+username = read-api@gogrid.com
+password = Asdf1234!
+wsdl = /etc/gogrid/zuora-producer/prod.zuora.a.39.0.wsdl
+droppath = /home/pentaho/data/zuora/
+
+[LOGGING]
+loggerName  = zuora-producer
+fileName    = /var/log/zuora/producer.log
+fileLevel   = DEBUG
+consoleLevel= DEBUG

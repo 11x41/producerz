@@ -1,0 +1,70 @@
+[Z]
+objects  = ['account', 'amendment', 'contact', 'invoice', 'invoiceadjustment', 'invoiceitem', 'invoiceitemadjustment', 'invoicepayment', 'payment', 'paymentmethod', 'product', 'productrateplan', 'productrateplancharge', 'productrateplanchargetier', 'rateplan', 'rateplancharge', 'rateplanchargetierds', 'refund', 'refundinvoicepayment', 'subscription', 'taxationitem', 'usage']
+
+[ACCOUNT]
+fields  = ['Id', 'AccountNumber', 'AdditionalEmailAddresses', 'AllowInvoiceEdit', 'AutoPay', 'Balance', 'Batch', 'BcdSettingOption', 'BillCycleDay', 'BillToContact.Id', 'CommunicationProfileId', 'CreatedById', 'CreatedDate', 'CreditBalance', 'CrmId', 'Currency', 'CustomerServiceRepName', 'DefaultPaymentMethod.Id', 'InvoiceDeliveryPrefsEmail', 'InvoiceDeliveryPrefsPrint', 'InvoiceTemplateId', 'LastInvoiceDate', 'Name', 'Notes', 'ParentId', 'PaymentGateway', 'PaymentTerm', 'PurchaseOrderNumber', 'SalesRepId__c', 'SalesRepName', 'SoldToContact.Id', 'Status', 'TaxExemptCertificateID', 'TaxExemptCertificateType', 'TaxExemptDescription', 'TaxExemptEffectiveDate', 'TaxExemptExpirationDate', 'TaxExemptIssuingJurisdiction', 'TaxExemptStatus', 'TotalInvoiceBalance', 'Type__c', 'UpdatedById', 'UpdatedDate']
+
+[AMENDMENT]
+fields  = ['Id', 'AutoRenew', 'Code', 'ContractEffectiveDate', 'CreatedById', 'CreatedDate', 'CustomerAcceptanceDate', 'Description', 'EffectiveDate', 'InitialTerm', 'Name', 'RenewalTerm', 'ServiceActivationDate', 'Status', 'SubscriptionId', 'TermStartDate', 'TermType', 'Type', 'UpdatedById', 'UpdatedDate']
+
+[CONTACT]
+fields  = ['Id', 'AccountId', 'Address1', 'Address2', 'City', 'Country', 'County', 'CreatedById', 'CreatedDate', 'Description', 'Fax', 'FirstName', 'HomePhone', 'LastName', 'MobilePhone', 'NickName', 'OtherPhone', 'OtherPhoneType', 'PersonalEmail', 'PostalCode', 'State', 'TaxRegion', 'UpdatedById', 'UpdatedDate', 'WorkEmail', 'WorkPhone']
+
+[INVOICE]
+fields  = ['Account.Id', 'Id', 'AdjustmentAmount', 'Amount', 'AmountWithoutTax', 'Balance', 'Comments', 'CreatedById', 'CreatedDate', 'DueDate', 'IncludesOneTime', 'IncludesRecurring', 'IncludesUsage', 'InvoiceDate', 'InvoiceNumber', 'LastEmailSentDate', 'PaymentAmount', 'PostedDate', 'RefundAmount', 'Source', 'SourceId', 'Status', 'TargetDate', 'TaxAmount', 'TransferredToAccounting', 'UpdatedById', 'UpdatedDate']
+
+[INVOICEADJUSTMENT]
+fields  = ['Id', 'AccountingCode', 'AdjustmentDate', 'AdjustmentNumber', 'Amount', 'CancelledById', 'CancelledOn', 'Comments', 'CreatedById', 'CreatedDate', 'ImpactAmount', 'InvoiceNumber', 'ReasonCode', 'ReferenceId', 'Status', 'TransferredToAccounting', 'Type', 'UpdatedById', 'UpdatedDate']
+
+[INVOICEITEM]
+fields  = ['Id', 'Invoice.Id', 'AccountingCode', 'ChargeAmount', 'ChargeDate', 'ChargeName', 'CreatedById', 'CreatedDate', 'ProcessingType', 'Quantity', 'RevRecStartDate', 'ServiceEndDate', 'ServiceStartDate', 'SKU', 'SubscriptionId', 'TaxAmount', 'TaxCode', 'TaxExemptAmount', 'UnitPrice', 'UOM', 'UpdatedById', 'UpdatedDate']
+
+[INVOICEITEMADJUSTMENT]
+fields  = ['Id', 'AccountId', 'AccountingCode', 'AdjustmentDate', 'AdjustmentNumber', 'Amount', 'CancelledById', 'CancelledDate', 'Comment', 'CreatedById', 'CreatedDate', 'InvoiceId', 'InvoiceItemName', 'InvoiceNumber', 'ReasonCode', 'ReferenceId', 'ServiceEndDate', 'ServiceStartDate', 'SourceId', 'SourceType', 'Status', 'TransferredToAccounting', 'Type', 'UpdatedById', 'UpdatedDate']
+
+[INVOICEPAYMENT]
+fields  = ['Id', 'Amount', 'CreatedById', 'CreatedDate', 'Invoice.Id', 'Payment.Id', 'RefundAmount', 'UpdatedById', 'UpdatedDate']
+
+[PAYMENT]
+fields = ['Id', 'AccountingCode', 'Account.Id', 'Amount', 'AppliedCreditBalanceAmount', 'AuthTransactionId', 'BankIdentificationNumber', 'CancelledOn', 'Comment', 'CreatedById', 'CreatedDate', 'EffectiveDate', 'GatewayOrderId', 'GatewayResponse', 'GatewayResponseCode', 'GatewayState', 'MarkedForSubmissionOn', 'PaymentNumber', 'ReferenceId', 'RefundAmount', 'SecondPaymentReferenceId', 'SettledOn', 'SoftDescriptor', 'SoftDescriptorPhone', 'Status', 'SubmittedOn', 'TransferredToAccounting', 'Type', 'UpdatedById', 'UpdatedDate']
+
+[PAYMENTMETHOD]
+fields = ['Id', 'AccountId', 'AchAbaCode', 'AchAccountName', 'AchAccountNumberMask', 'AchAccountType', 'AchBankName', 'Active', 'BankBranchCode', 'BankCheckDigit', 'BankCity', 'BankCode', 'BankIdentificationNumber', 'BankName', 'BankPostalCode', 'BankStreetName', 'BankStreetNumber', 'BankTransferAccountName', 'bankTransferAccountNumberMask', 'BankTransferAccountType', 'BankTransferType', 'BusinessIdentificationCode', 'City', 'Country', 'CreatedById', 'CreatedDate', 'CreditCardAddress1', 'CreditCardAddress2', 'CreditCardCity', 'CreditCardCountry', 'CreditCardExpirationMonth', 'CreditCardExpirationYear', 'CreditCardHolderName', 'CreditCardMaskNumber', 'CreditCardPostalCode', 'CreditCardState', 'CreditCardType', 'DeviceSessionId', 'Email', 'ExistingMandate', 'FirstName', 'IBAN', 'IPAddress', 'LastFailedSaleTransactionDate', 'LastName', 'LastTransactionDateTime', 'LastTransactionStatus', 'MandateCreationDate', 'MandateID', 'MandateReceived', 'MandateUpdateDate', 'MaxConsecutivePaymentFailures', 'Name', 'NumConsecutiveFailures', 'PaymentMethodStatus', 'PaymentRetryWindow', 'PaypalBaid', 'PaypalEmail', 'PaypalPreapprovalKey', 'PaypalType', 'Phone', 'PostalCode', 'State', 'StreetName', 'StreetNumber', 'TotalNumberOfErrorPayments', 'TotalNumberOfProcessedPayments', 'Type', 'UpdatedById', 'UpdatedDate', 'UseDefaultRetryRule']
+
+[PRODUCT]
+fields = ['Id', 'CreatedById', 'CreatedDate', 'Description', 'EffectiveEndDate', 'EffectiveStartDate', 'Name', 'SKU', 'UpdatedById', 'UpdatedDate']
+
+[PRODUCTRATEPLAN]
+fields = ['Id', 'CreatedById', 'CreatedDate', 'Description', 'EffectiveEndDate', 'EffectiveStartDate', 'Name', 'Product.Id', 'UpdatedById', 'UpdatedDate']
+
+[PRODUCTRATEPLANCHARGE]
+fields = ['Id', 'AccountingCode', 'BillCycleDay', 'BillCycleType', 'BillingPeriod', 'BillingPeriodAlignment', 'ChargeModel', 'ChargeType', 'CreatedById', 'CreatedDate', 'DefaultQuantity', 'DeferredRevenueAccount', 'Description', 'IncludedUnits', 'MaxQuantity', 'MinQuantity', 'Name', 'NumberOfPeriod', 'OverageCalculationOption', 'PriceIncreasePercentage', 'ProductRatePlan.Id', 'RecognizedRevenueAccount', 'RevenueRecognitionRuleName', 'RevRecCode', 'RevRecTriggerCondition', 'SmoothingModel', 'SpecificBillingPeriod', 'Taxable', 'TaxCode', 'TriggerEvent', 'UOM', 'UpdatedById', 'UpdatedDate', 'UseDiscountSpecificAccountingCode']
+
+[PRODUCTRATEPLANCHARGETIER]
+fields = ['Id', 'Active', 'CreatedById', 'CreatedDate', 'EndingUnit', 'IsOveragePrice', 'Price', 'PriceFormat', 'ProductRatePlanCharge.Id', 'StartingUnit', 'Tier', 'UpdatedById', 'UpdatedDate']
+
+[RATEPLAN]
+fields  = ['Id', 'Amendment.Id', 'Amendment.Type', 'CreatedById', 'CreatedDate', 'Name', 'ProductRatePlan.Id', 'Subscription.Id', 'UpdatedById', 'UpdatedDate']
+
+[RATEPLANCHARGE]
+fields  = ['Id', 'AccountingCode', 'ApplyDiscountTo', 'BillCycleDay', 'BillCycleType', 'BillingPeriodAlignment', 'ChargedThroughDate', 'ChargeModel', 'ChargeNumber', 'ChargeType', 'CreatedById', 'CreatedDate', 'Description', 'DiscountLevel', ' DMRC', 'DTCV', 'EffectiveEndDate', 'EffectiveStartDate', 'IsLastSegment', 'MRR', 'Name', 'NumberOfPeriods', 'OriginalId', 'OverageCalculationOption', ' OverageUnusedUnitsCreditOption', ' ProcessedThroughDate', 'ProductRatePlanCharge.Id', 'Quantity', 'RatePlan.Id', 'Segment', 'TCV', 'TriggerDate', 'TriggerEvent', 'UOM', 'UpdatedById', 'UpdatedDate', 'UpToPeriods', ' Version']
+
+[RATEPLANCHARGETIERDS]
+fields  = ['Id', 'CreatedById', 'CreatedDate', 'Currency', 'Discount Amount', 'DiscountPercentage', 'EndingUnit', 'IncludedUnits', 'OveragePrice', 'Price', 'PriceFormat', 'RatePlanCharge.Id', 'StartingUnit', 'Tier', 'UpdatedById', 'UpdatedDate']
+
+[REFUND]
+fields = ['Id', 'AccountingCode', 'Account.Id', 'Amount', 'Comment', 'CreatedById', 'CreatedDate', 'Gateway', 'GatewayResponse', 'GatewayResponseCode', 'MethodType', 'PaymentMethodId', 'ReasonCode', 'ReferenceId', 'RefundDate', 'RefundNumber', 'RefundTransactionTime', 'SoftDescriptor', 'SoftDescriptorPhone', 'SourceType', 'Status', 'TransferredToAccounting', 'Type', 'UpdatedById', 'UpdatedDate']
+
+[REFUNDINVOICEPAYMENT]
+fields = ['Id', 'CreatedById', 'CreatedDate', 'InvoicePayment.Id', 'RefundAmount', 'Refund.Id', 'UpdatedById', 'UpdatedDate']
+
+[SUBSCRIPTION]
+fields  = ['Id', 'Account.Id', 'AutoRenew', 'CancelledDate', 'ContractAcceptanceDate', 'ContractEffectiveDate', 'CreatedById', 'CreatedDate', 'CreatorAccountId', 'CreatorInvoiceOwnerId', 'InitialTerm', 'InvoiceOwnerId', 'IsInvoiceSeparate', 'Name', 'Notes', 'OriginalCreatedDate', 'OriginalId', 'PreviousSubscriptionId', 'RenewalTerm', 'ServiceActivationDate', 'Status', 'SubscriptionEndDate', 'SubscriptionStartDate', 'TermEndDate', 'TermStartDate', 'TermType', 'UpdatedById', 'UpdatedDate', 'Version']
+
+[TAXATIONITEM]
+fields = ['Id', 'AccountingCode', 'CreatedById', 'CreatedDate', 'ExemptAmount', 'Invoice.Id', 'InvoiceItem.Id', 'Jurisdiction', 'LocationCode', 'Name', 'TaxAmount', 'TaxCode', 'TaxCodeDescription', 'TaxDate', 'TaxRate', 'TaxRateDescription', 'TaxRateType', 'UpdatedById', 'UpdatedDate']
+
+[USAGE]
+fields = ['Id', 'Account.Id', 'AccountNumber', 'RatePlanCharge.Id', 'CreatedById', 'CreatedDate', 'EndDateTime', 'Quantity', 'RbeStatus', 'SourceType', 'StartDateTime', 'SubmissionDateTime', 'Subscription.Id', 'UOM', 'UpdatedById', 'UpdatedDate']
+                                                   
+
